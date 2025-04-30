@@ -11,7 +11,8 @@ export function Main({ children }: MainProps) {
         "grid",
         "grid-rows-[auto_1fr_auto]",
         "min-h-screen",
-        "w-full"
+        "w-full",
+        "bg-[#e6e6e6]"
       )}
     >
       {children}

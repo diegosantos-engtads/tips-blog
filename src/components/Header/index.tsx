@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import { Container } from "../Container";
+import Link from "next/link";
 
 export function Header() {
   return (
@@ -13,7 +14,7 @@ export function Header() {
             "lg:text-6xl/normal md:py-12" //Maior que 1024px fica assim
           )}
         >
-          <a href="#">The Blog</a>
+          <Link href="/">The Blog</Link>
         </h1>
       </Container>
     </header>
