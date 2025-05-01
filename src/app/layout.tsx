@@ -3,6 +3,7 @@ import './globals.css';
 import { Main } from "@/components/Main";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Container } from "@/components/Container";
 
 export const metadata: Metadata = {
   title: {
@@ -18,10 +19,10 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
     <html lang="pt-BR">
-      <body>
+      <body className="bg-[#e6e6e6]">
         <Main>
           <Header />
-          {children}
+          <Container>{children}</Container>
           <Footer />
         </Main>
       </body>
