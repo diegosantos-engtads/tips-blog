@@ -34,6 +34,8 @@ export async function generateMetadata({
 }
 
 export default async function PostSlug({ params }: PostSlugProps) {
+  throw new Error("Eeeo na Slug");
+
   const { slug } = await params;
   return (
     <Suspense fallback={<SpinLoader />}>
