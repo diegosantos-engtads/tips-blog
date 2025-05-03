@@ -13,7 +13,7 @@ export async function SinglePost({ slug }: SinglePostProps) {
 
   return (
     <article>
-      <header className="group flex flex-col gap-4 mb-4">
+      <section className="group flex flex-col gap-4 mb-4">
         <Image
           className="rounded-2xl"
           src={post.coverImageUrl}
@@ -26,7 +26,7 @@ export async function SinglePost({ slug }: SinglePostProps) {
         <p>
           {post.author} | <PostDate dateTime={post.createdAt}></PostDate>
         </p>
-      </header>
+      </section>
       <p className="mb-8 text-xl text-slate-600">{post.excerpt}</p>
       <SafeMarkdown markdown={post.content} />
     </article>

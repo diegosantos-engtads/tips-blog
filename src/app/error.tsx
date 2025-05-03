@@ -8,16 +8,16 @@ type RootErrorProps = {
   reset: () => void;
 };
 
-export default function RootError({ error, reset }: RootErrorProps) {
+export default function RootError({ error }: RootErrorProps) {
   useEffect(() => {
-    console.log(error);
+    // console.log(error);
   }, [error]);
   return (
     <>
       <ErrorMessage
-        pageTitle="Slug"
-        contentTitle="Erro 404:"
-        content={<button onClick={() => reset()}>Clique</button>}
+        pageTitle="Internal Server Error"
+        contentTitle="501:"
+        content="Ocorreu um erro, tente novamente mais tarde"
       />
     </>
   );

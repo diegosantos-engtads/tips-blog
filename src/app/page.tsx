@@ -4,8 +4,6 @@ import { Suspense } from "react";
 import { PostFeatured } from "@/components/PostFeatured";
 
 export default function HomePage() {
-  throw new Error("Erro HOme");
-
   return (
     <>
       <Suspense fallback={<SpinLoader />}>

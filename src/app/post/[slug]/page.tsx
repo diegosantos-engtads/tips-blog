@@ -1,6 +1,7 @@
 import { SinglePost } from "@/components/SinglePost";
 import { SpinLoader } from "@/components/SpinLoader";
 import { findPostBySlugCached } from "@/lib/post/queries";
+import { truncateText } from "@/utils/truncate-text";
 import { Metadata } from "next";
 import { Suspense } from "react";
 
@@ -17,25 +18,24 @@ export async function generateMetadata({
   const maxTitleLength = 65;
   const maxDescriptionLength = 255;
 
-  const truncatedTitle =
-    post.title.length > maxTitleLength
-      ? post.title.slice(0, maxTitleLength - 3) + "..."
-      : post.title;
-
-  const truncatedDescription =
-    post.excerpt.length > maxDescriptionLength
-      ? post.excerpt.slice(0, maxDescriptionLength - 3) + "..."
-      : post.excerpt;
-
   return {
-    title: truncatedTitle,
-    description: truncatedDescription,
+    title: truncateText(post.title, maxTitleLength),
+    description: truncateText(post.excerpt, maxDescriptionLength),
   };
 }
 
-export default async function PostSlug({ params }: PostSlugProps) {
-  throw new Error("Eeeo na Slug");
+// export async function generateStaticParams() {
+//   const posts = await findAllPublicPostsCached();
+//   const params = posts.map((post) => {
+//     return {
+//       slug: post.slug,
+//     };
+//   });
+//   console.log(params);
+//   return params;
+// }
 
+export default async function PostSlug({ params }: PostSlugProps) {
   const { slug } = await params;
   return (
     <Suspense fallback={<SpinLoader />}>

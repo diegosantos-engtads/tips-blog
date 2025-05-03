@@ -20,7 +20,9 @@ export function SafeMarkdown({ markdown }: SafeMarkdownProps) {
         "prose-a:hover:text-blue-700",
         "prose-a:hover:underline",
         "prose-img:mx-auto",
-        "lg:prose-lg"
+        "lg:prose-lg",
+        "sm:prose-sm",
+        "md:prose-md"
       )}
     >
       <ReactMarkdown
@@ -29,7 +31,6 @@ export function SafeMarkdown({ markdown }: SafeMarkdownProps) {
         components={{
           table: ({ node, ...props }) => {
             if (!node?.children) return "";
-
             return (
               <div className="overflow-x-auto">
                 <table className="w-full min-w-[600px]" {...props} />

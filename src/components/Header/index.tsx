@@ -11,7 +11,7 @@ export function Header() {
             "text-3xl/normal font-extrabold py-8", //Menor que 640px fica assim
             "sm:text-4xl/normal sm:py-10", //Maior que 640px e até... fica assim
             "md:text-5xl/normal md:py-11", //Maior que 768px e até... fica assim
-            "lg:text-6xl/normal md:py-12" //Maior que 1024px fica assim
+            "lg:text-7xl/normal md:py-12" //Maior que 1024px fica assim
           )}
         >
           <Link href="/">The Blog</Link>
