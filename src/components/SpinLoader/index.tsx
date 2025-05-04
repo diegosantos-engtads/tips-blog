@@ -5,7 +5,7 @@ type SpinLoaderProps = {
 };
 export function SpinLoader({ className = "" }: SpinLoaderProps) {
   const classes = clsx(
-    "fixed inset-0 flex",
+    "inset-0 flex",
     "items-center",
     "justify-center",
     className

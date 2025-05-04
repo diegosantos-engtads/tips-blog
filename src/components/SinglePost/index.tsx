@@ -15,7 +15,7 @@ export async function SinglePost({ slug }: SinglePostProps) {
     <article>
       <section className="group flex flex-col gap-4 mb-4">
         <Image
-          className="rounded-2xl"
+          className="w-full h-auto rounded-2xl"
           src={post.coverImageUrl}
           width={1200}
           height={720}

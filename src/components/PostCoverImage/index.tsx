@@ -13,7 +13,7 @@ export function PostCoverImage({ imageProps, linkProps }: PostCoverImageProps) {
       <Link
         {...linkProps}
         className={clsx(
-          "w-full h-full overflow-hidden rounded-2xl ",
+          "w-full overflow-hidden rounded-2xl ",
           linkProps.className
         )}
       >
@@ -21,7 +21,7 @@ export function PostCoverImage({ imageProps, linkProps }: PostCoverImageProps) {
           {...imageProps}
           alt={imageProps.alt}
           className={clsx(
-            "group-hover:scale-105 w-full h-full object-cover",
+            "group-hover:scale-105 h-full object-cover",
             "object-center transition"
           )}
         />

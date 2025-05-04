@@ -11,18 +11,13 @@ export function SafeMarkdown({ markdown }: SafeMarkdownProps) {
   return (
     <div
       className={clsx(
-        "prose prose-slate",
-        "w-full max-w-none",
-        "overflow-hidden",
-        "prose-a:transition",
-        "prose-a:no-underline",
-        "prose-a:text-blue-500",
-        "prose-a:hover:text-blue-700",
-        "prose-a:hover:underline",
+        "prose prose-slate lg:prose-lg break-words w-full max-w-full",
+        "overflow-x-hidden",
         "prose-img:mx-auto",
-        "lg:prose-lg",
-        "sm:prose-sm",
-        "md:prose-md"
+        "prose-code:break-words prose-code:overflow-x-auto",
+        "prose-a:transition prose-a:no-underline",
+        "prose-a:text-blue-500 prose-a:hover:text-blue-700 prose-a:hover:underline",
+        "prose-code:break-all"
       )}
     >
       <ReactMarkdown
@@ -32,8 +27,8 @@ export function SafeMarkdown({ markdown }: SafeMarkdownProps) {
           table: ({ node, ...props }) => {
             if (!node?.children) return "";
             return (
-              <div className="overflow-x-auto">
-                <table className="w-full min-w-[600px]" {...props} />
+              <div>
+                <table {...props} />
               </div>
             );
           },
