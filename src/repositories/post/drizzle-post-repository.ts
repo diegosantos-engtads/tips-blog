@@ -20,6 +20,7 @@ export class DrizzlePostRepository implements PostRepository {
   async findAll(): Promise<PostModel[]> {}
 
   async findById(id: string): Promise<PostModel> {}
+  async findById(id: string): Promise<PostModel> {}
 }
 
 (async () => {
