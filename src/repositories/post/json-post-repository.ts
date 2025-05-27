@@ -57,5 +57,4 @@ export class JsonPostRepository implements PostRepository {
 
     return post;
   }
-
 }
