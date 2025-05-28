@@ -1,4 +1,4 @@
-import { formatDatetime, formatRelativeDate } from "@/utils/format-datetime";
+import { formatDatetime } from "@/utils/format-datetime";
 import clsx from "clsx";
 
 type PostDateProps = {
@@ -10,7 +10,7 @@ export function PostDate({ dateTime }: PostDateProps) {
     <time
       className={clsx("text-slate-600 text-sm/tight")}
       dateTime={dateTime}
-      title={formatRelativeDate(dateTime)}
+      title={dateTime}
     >
       {formatDatetime(dateTime)}
     </time>

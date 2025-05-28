@@ -5,6 +5,8 @@ import { truncateText } from "@/utils/truncate-text";
 import { Metadata } from "next";
 import { Suspense } from "react";
 
+export const dynamic = "force-static";
+
 type PostSlugProps = {
   params: Promise<{ slug: string }>;
 };
