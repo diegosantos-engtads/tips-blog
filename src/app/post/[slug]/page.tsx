@@ -1,6 +1,6 @@
 import { SinglePost } from "@/components/SinglePost";
 import { SpinLoader } from "@/components/SpinLoader";
-import { findPostBySlugCached } from "@/lib/post/queries";
+import { findPublicPostBySlugCached } from "@/lib/post/queries/public";
 import { truncateText } from "@/utils/truncate-text";
 import { Metadata } from "next";
 import { Suspense } from "react";
@@ -15,7 +15,7 @@ export async function generateMetadata({
   params,
 }: PostSlugProps): Promise<Metadata> {
   const { slug } = await params;
-  const post = await findPostBySlugCached(slug);
+  const post = await findPublicPostBySlugCached(slug);
 
   const maxTitleLength = 65;
   const maxDescriptionLength = 255;
