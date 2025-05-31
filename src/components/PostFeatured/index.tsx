@@ -37,6 +37,13 @@ export async function PostFeatured() {
         excerpt={post.excerpt}
         title={post.title}
       />
+      <PostSummary
+        postLink={postLink}
+        postHeading="h2"
+        createdAt={post.createdAt}
+        excerpt={post.excerpt}
+        title={post.title}
+      />
     </section>
   );
 }
