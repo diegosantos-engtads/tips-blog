@@ -9,9 +9,7 @@ type RootErrorProps = {
 };
 
 export default function RootError({ error }: RootErrorProps) {
-  useEffect(() => {
-    // console.log(error);
-  }, [error]);
+  useEffect(() => {}, [error]);
   return (
     <>
       <ErrorMessage
