@@ -72,6 +72,15 @@ export default async function PostsListAdmin() {
             >
               Ok
             </button>
+            <button
+              className={clsx(
+                "bg-blue-500 hover:bg-blue-600 transition text-blue-50",
+                "flex items-center justify-center",
+                "py-2 px-4 rounded-lg cursor-pointer"
+              )}
+            >
+              Ok
+            </button>
           </div>
         </div>
       </div>
